@@ -41,3 +41,5 @@ sudo bash -c 'cat << EOF >> /etc/fstab
 /dev/vg_datos/lv_workareas /work              ext4    defaults    0    0
 /dev/vg_temp/lv_swap       none               swap    sw          0    0
 EOF'
+
+sudo systemctl restart docker
