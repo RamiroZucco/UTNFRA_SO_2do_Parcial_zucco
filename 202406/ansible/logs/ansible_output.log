@@ -1,0 +1,95 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 21:26:01,712 p=25331 u=zucco n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-14 21:26:02,176 p=25331 u=zucco n=ansible | PLAY [all] ******************************************************************************************************************
+2024-11-14 21:26:02,190 p=25331 u=zucco n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2024-11-14 21:26:02,292 p=25331 u=zucco n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nzucco@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-14 21:26:03,270 p=25331 u=zucco n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 21:26:03,270 p=25331 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:26:03,279 p=25331 u=zucco n=ansible | TASK [include_role : 2do_parcial] *******************************************************************************************
+2024-11-14 21:26:03,302 p=25331 u=zucco n=ansible | ERROR! conflicting action statements: lineinfile, path
+
+The error appears to be in '/home/zucco/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 33, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Configurar sudoers para grupo 2PSupervisores no requiera password
+  ^ here
+
+2024-11-14 21:34:55,832 p=25453 u=zucco n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-14 21:34:55,948 p=25453 u=zucco n=ansible | PLAY [all] *****************************************************************************************************************************
+2024-11-14 21:34:55,954 p=25453 u=zucco n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2024-11-14 21:34:56,063 p=25453 u=zucco n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nzucco@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-14 21:34:56,876 p=25453 u=zucco n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation
+of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 21:34:56,877 p=25453 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:34:56,886 p=25453 u=zucco n=ansible | TASK [include_role : 2do_parcial] ******************************************************************************************************
+2024-11-14 21:34:56,909 p=25453 u=zucco n=ansible | included: 2do_parcial for localhost
+2024-11-14 21:34:56,917 p=25453 u=zucco n=ansible | TASK [2do_parcial : Crear estructura de directorios alumno] ****************************************************************************
+2024-11-14 21:34:57,184 p=25453 u=zucco n=ansible | changed: [localhost]
+2024-11-14 21:34:57,192 p=25453 u=zucco n=ansible | TASK [2do_parcial : Crear estructura de directorios equipo] ****************************************************************************
+2024-11-14 21:34:57,346 p=25453 u=zucco n=ansible | changed: [localhost]
+2024-11-14 21:34:57,356 p=25453 u=zucco n=ansible | TASK [2do_parcial : Crear archivo datos_alumno.txt] ************************************************************************************
+2024-11-14 21:34:57,827 p=25453 u=zucco n=ansible | changed: [localhost]
+2024-11-14 21:34:57,835 p=25453 u=zucco n=ansible | TASK [2do_parcial : Crear archivo datos_equipo.txt] ************************************************************************************
+2024-11-14 21:34:58,125 p=25453 u=zucco n=ansible | changed: [localhost]
+2024-11-14 21:34:58,133 p=25453 u=zucco n=ansible | TASK [2do_parcial : Configurar sudoers para 2PSupervisores no requiera password] *******************************************************
+2024-11-14 21:34:58,402 p=25453 u=zucco n=ansible | changed: [localhost]
+2024-11-14 21:34:58,417 p=25453 u=zucco n=ansible | TASK [Otra tarea] **********************************************************************************************************************
+2024-11-14 21:34:58,429 p=25453 u=zucco n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-14 21:34:58,430 p=25453 u=zucco n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-11-14 21:34:58,430 p=25453 u=zucco n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 21:34:58,430 p=25453 u=zucco n=ansible | localhost                  : ok=8    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 21:52:39,943 p=25770 u=zucco n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-11-14 21:52:40,061 p=25770 u=zucco n=ansible | PLAY [all] ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:40,066 p=25770 u=zucco n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:40,194 p=25770 u=zucco n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nzucco@127.0.0.1: Permission denied (publickey).", "unreachable": true}
+2024-11-14 21:52:41,108 p=25770 u=zucco n=ansible | [WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.10, but future installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+
+2024-11-14 21:52:41,108 p=25770 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:52:41,117 p=25770 u=zucco n=ansible | TASK [include_role : 2do_parcial] *********************************************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:41,139 p=25770 u=zucco n=ansible | included: 2do_parcial for localhost
+2024-11-14 21:52:41,146 p=25770 u=zucco n=ansible | TASK [2do_parcial : Crear estructura de directorios alumno] *******************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:41,417 p=25770 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:52:41,425 p=25770 u=zucco n=ansible | TASK [2do_parcial : Crear estructura de directorios equipo] *******************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:41,594 p=25770 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:52:41,603 p=25770 u=zucco n=ansible | TASK [2do_parcial : Crear archivo datos_alumno.txt] ***************************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:42,031 p=25770 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:52:42,039 p=25770 u=zucco n=ansible | TASK [2do_parcial : Crear archivo datos_equipo.txt] ***************************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:42,346 p=25770 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:52:42,354 p=25770 u=zucco n=ansible | TASK [2do_parcial : Configurar sudoers para el grupo 2PSupervisores no requiera contraseña] ***********************************************************************************************************************************************************************************
+2024-11-14 21:52:42,615 p=25770 u=zucco n=ansible | ok: [localhost]
+2024-11-14 21:52:42,629 p=25770 u=zucco n=ansible | TASK [Otra tarea] *************************************************************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:42,640 p=25770 u=zucco n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-11-14 21:52:42,641 p=25770 u=zucco n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************************************************************************
+2024-11-14 21:52:42,641 p=25770 u=zucco n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-11-14 21:52:42,641 p=25770 u=zucco n=ansible | localhost                  : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
